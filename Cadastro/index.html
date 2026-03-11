@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <title>Cadastro</title>
+
+    <script>
+        function cadastrar(event) {
+            const nome = document.getElementById("input-nome").value;
+            event.preventDefault();
+            alert("Dados de " + nome + " cadastrados!");
+            document.getElementById("form-cadastro").reset();
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <form id="form-cadastro" onsubmit="cadastrar(event)">
+        <h1>
+            Formulário de Cadastro
+        </h1>
+        <div class="inputs">
+            <div class="grupoLabelInput">
+                <label for="input-nome">Nome:<i class="bx bxs-user"></i></label>
+                <input id="input-nome" placeholder="Digite seu nome" type="text" required>
+
+            </div>
+            <div class="grupoLabelInput">
+                <label for="input-email">Email:<i class="bx bxs-envelope"></i></label>
+                <input id="input-email" placeholder="Digite seu email" type="email" required>
+
+            </div>
+            <div class="grupoLabelInput">
+                <label for="input-senha">Senha:<i class="bx bxs-lock-alt"></i></label>
+                <input id="input-senha" placeholder="Digite sua senha" type="password" required>
+            </div>
+        </div>
+        <button id="btn-cadastrar" type="submit">
+            Cadastrar
+        </button>
+    </form>
+</body>
+
+</html>
